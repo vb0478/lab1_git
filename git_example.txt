@@ -1,0 +1,30 @@
+git init
+
+git clone /path/to/repository
+git clone username@host:/path/to/repository
+
+git add <filename>
+git add *
+git commit -m "Commit message"
+git push origin master
+//Zmień master na dowolną gałąź, której zmiany wysyłasz. 
+
+//Jeśli nie sklonowałeś istniejącego repozytorium i chcesz połączyć je ze zdalnym serwerem, 
+//musisz go dodać poprzez 
+git remote add origin <server>
+
+//utwórz nową gałąź o nazwie "feature_x" i przełącz się na nią
+git checkout -b feature_x
+git push origin <branch>
+//przełącz się z powrotem na master
+git checkout master
+//aby scalić inną gałąź z gałęzią aktywną (np. master), użyj
+git merge <branch>
+//usuń gałąź
+git branch -d feature_x
+
+//aby zaktualizować lokalne repozytorium do ostatniego commita
+git pull
+
+git fetch origin
+git reset --hard origin/master
